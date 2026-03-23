@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+/* Hide radios */
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Tab labels */
+
+.tab-labels {
+    display: flex;
+}
+
+.tab-labels label {
+    padding: 12px 20px;
+    background: #ddd;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tab-labels label:hover {
+    background: #ccc;
+}
+
+/* Content */
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(10px);
+    position: absolute;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Checked logic */
+
+#tab1:checked ~ .tab-content .content1,
+#tab2:checked ~ .tab-content .content2,
+#tab3:checked ~ .tab-content .content3 {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
