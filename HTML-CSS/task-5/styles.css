@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #f4f6f8;
+}
+
+.open-btn {
+    padding: 12px 20px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Overlay */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Modal */
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+/* Target State */
+
+#modal:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#modal:target .modal {
+    transform: scale(1);
+}
+
+/* Close button */
+
+.close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #2c3e50;
+}
