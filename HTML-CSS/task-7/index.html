@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="slider">
+
+    <!-- Radio controls (Must place State controller before controlled element for ~ selector and DOM) -->
+    <input type="radio" name="slide" id="s1" checked>
+    <input type="radio" name="slide" id="s2">
+    <input type="radio" name="slide" id="s3">
+
+    <!-- Slides -->
+    <div class="slides">
+        <div class="slide"> <img src="https://i.natgeofe.com/n/58087939-947e-44b1-99ba-accf60497382/11_pod-best-animals.jpg"> </div>
+        <div class="slide"> <img src="https://i.natgeofe.com/n/29712b3c-fce4-4bbc-99fe-de3a01033e38/01_pod-best-animals.jpg"> </div>
+        <div class="slide"> <img src="https://i.natgeofe.com/n/88a9899d-276a-4dc7-a84b-f8313714065d/32-wildlife-gallery-prod-yourshot-1352010-10885652.jpg"> </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+    </div>
+
+</div>
+
+</body>
+</html>
